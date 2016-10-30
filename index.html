@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Modular JS People Adder</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="statsModule">
+    <script id="stats-template" type="text/template">
+        People: {{people}}
+    </script>
+</div>
+<div id="peopleModule">
+    <form id="addPerson">
+        <input placeholder="name" type="text">
+        <button type="submit">Add Person</button>
+    </form>
+    <ul id="people">
+        <script id="people-template" type="text/template">
+            {{#people}}
+            <li>
+                <span>{{.}}</span>
+                <i class="del">X</i>
+            </li>
+            {{/people}}
+        </script>
+    </ul>
+</div>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/mustache/mustache.min.js"></script>
+<!--<script src="assets/js/pubsub.js"></script>
+<script src="assets/js/stats.js"></script>
+<script src="assets/js/revealing_module.js"></script>
+<script src="assets/js/classical_inheritance.js"></script>-->
+<script src="assets/js/prototypal_inheritance.js"></script>
+</body>
+</html>
